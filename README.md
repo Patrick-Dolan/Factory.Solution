@@ -56,10 +56,10 @@ Example of complete appsettings.json:
 ### Test Setup/Installation
 
 * Open the repo on your editor of choice/terminal
-* Navigate to ProjectName.Tests directory in your terminal
+* Navigate to Factory.Tests directory in your terminal
 * Run the following command to setup testing:  
 <code>dotnet restore</code>  
-* Run tests by going to the test project in the terminal (ProjectName.Solution/ProjectName.Tests) and running the following command:  
+* Run tests by going to the test project in the terminal (Factory.Solution/Factory.Tests) and running the following command:  
 <code>dotnet test</code>  
 
 ## Known Bugs
