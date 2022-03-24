@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+@model Factory.Models.Engineer
+
+<div class="row">
+  <div class="col">
+    <h3>Engineer Details</h3>
+    <br>
+    <p><strong>Name: </strong>@Model.Name</p>
+    <p><strong>Hire date: </strong>@Model.HireDate</p>
+    <h4>Licensed machines:</h4>
+    @if(@Model.JoinEntities.Count == 0)
+    {
+      <p>This engineer isn't currently licensed to repair any machines. To add machines to the engineer follow this link: @Html.ActionLink("Add Machine", "AddMachine")</p>
+    }
+    else
+    {
+      <ul>
+        @foreach (var join in @Model.JoinEntities)
+        {
+          <li>@Html.ActionLink($"{join.Machine.Name}", "Details", "Machines", new { id = join.Machine.MachineId})</li>
+        }
+      </ul>
+    }
+  </div>
+</div>
