@@ -97,6 +97,7 @@ namespace Factory.Controllers
       }
       return RedirectToAction("Details", new { id = engineer.EngineerId});
     }
+    
     [HttpPost]
     public ActionResult DeleteMachine(int joinId)
     {
