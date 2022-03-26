@@ -13,7 +13,7 @@
     <h4>Licensed machines:</h4>
     @if(@Model.JoinEntities.Count == 0)
     {
-      <p>This engineer isn't currently licensed to repair any machines. To add machines to the engineer click here: @Html.ActionLink("Add Machine License", "AddMachine")</p>
+      <p>This engineer isn't currently licensed to repair any machines. To add machines to the engineer click here: @Html.ActionLink("Add Machine License", "AddMachine", new { id = Model.EngineerId})</p>
     }
     else
     {
@@ -26,6 +26,6 @@
     }
     <p>@Html.ActionLink("Edit Engineer", "Edit", new { id = Model.EngineerId})</p>
     <p>@Html.ActionLink("Delete Engineer", "Delete", new { id = Model.EngineerId})</p>
-    <p>@Html.ActionLink("Add Machine License", "AddMachine")</p>
+    <p>@Html.ActionLink("Add Machine License", "AddMachine", new { id = Model.EngineerId})</p>
   </div>
 </div>
